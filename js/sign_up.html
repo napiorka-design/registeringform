@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
+    <link href=“https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,400;1,500&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  </head>
+    <header>
+      <nav class="navigation">
+        <p>
+          <input type="text" placeholder="Search..">
+          <a href="index.html">Home</a>
+          
+          <a href="sign_up.html">Sign Up</a>
+          </p>
+       </nav>
+    </header>
+    <body><!--Comments and explanations in HTML code -->
+    <form method="post" onsubmit="return validate();" action="success_page.html" id="form1" >
+      <p><label for="firstname">First Name</label>
+      <input type="text" name="firstname" id="firstname" placeholder="First Name" required maxlength="20" minlength="2" value="" onblur="myFunction(this.id, this.value, 'as')">
+      <span id="fbfirstname"></span>
+      </p>
+      <p><label for="surname">Surname</label>
+      <input type="text" name="surname" id="surname" placeholder="Surname or Family Name" required maxlength="20" minlength="2" value="" onblur="myFunction(this.id, this.value, 'as')"><span id="fbsurname">  </span>
+      </p>
+      <p><label for="dateofbirth">Date of Birth</label>
+      <input type="date" name="dateofbirth" id="dateofbirth" max="2016-12-31" min="1900-01-01"  placeholder="yyyy-mm-dd" onblur="myFunction(this.id , this.value,'dt')">
+      <span id="fbdateofbirth"></span>
+      </p>
+     <fieldset>
+      <legend>Contact Address</legend>
+      <label for="house">Number</label>
+      <input type="text" name="house" id="house" placeholder="House or flat name or number " required maxlength="20" minlength="1" value="" onblur="myFunction(this.id, this.value, 'as')">
+    <span id="fbhouse"></span>
+    <br> <br>
+      <label for="add2">Address</label>
+      <input type="text" name="add2" id="add2" placeholder="Address" required maxlength="20" minlength="2" value="" onblur="myFunction(this.id, this.value, 'as')">
+      <span id="fbadd2"></span>
+      <br> <br>
+      <label for="add3">Address</label>
+      <input type="text" name="add3" id="add3" placeholder="" maxlength="20" minlength="2" value="" onblur="myFunction(this.id, this.value, 'as')">
+      <span id="fbadd3"></span>
+      <br> <br>
+      <label for="town">Town</label>
+      <input type="text" name="Town" id="town" placeholder="Address: Postal Town" required maxlength="20" minlength="2" value="" onblur="myFunction(this.id, this.value, 'as')">
+      <span id="fbtown"></span>
+    <br> <br>
+      <label for="postcode">Post Code</label>
+      <input type="text" name="postcode" id="postcode" placeholder="Post Code" required maxlength="15" minlength="2" value="" onblur="myFunction(this.id, this.value, 'reg')">
+      <span id="fbpostcode"></span>
+      <br> <br>
+      </fieldset>
+      <fieldset>
+      <legend>Other Contact Details</legend>
+      <label for="tellandline">Telephone landline</label>
+      <input type="text" name="tellandline" id="tellandline" placeholder="Telephone UK land line. " maxlength="20" minlength="10" value="" onblur="myFunction(this.id, this.value, 'reg')">
+      <span id="fbtellandline"></span>
+      <br> <br>
+      <input type="text" name="telmobile" id="telmobile" placeholder="Mobile Telephone UK only"  maxlength="20" minlength="10" value="" onblur="myFunction(this.id, this.value, 'reg')">
+      <span id="fbtelmobile"></span>
+      <br> <br>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Email" required maxlength="100" minlength="2" value="" onblur="myFunction(this.id, this.value, 'reg')">
+      <span id="fbemail"></span>
+      <br> <br>
+      </fieldset>
+<fieldset>
+  <legend>CREATE YOUR FREE ACCOUNT BELOW</legend>
+    <!--Create password-->
+    <label for="user"> Username:</label>
+    <input type="text" name="user" id="user" value="" placeholder="Username" minlength="5" maxlength="20" onblur="myFunction(this.id, this.value, 'reg')">
+    <span id="fbuser" ></span>
+    <br><br>
+    <label for="password1" > Create Password:</label><br>
+    <input type="password" name="password1"  id="password1" value="" placeholder="Password" minlength="8" onblur="myFunction(this.id, this.value, 'reg')"><br>
+    <span  id="passwNotice"> A password should be alphanumeric.
+      First letter of the password should be capital.
+      Password must contain a special character (@, $, !, &, etc).
+      Password length must be greater than 8 characters.
+     The password fields should not be empty.</span><br>
+    <span id="fbpassword1" ></span>
+    <br> <br>
+    <!-- <label for="password2" > Repeat Password: </label>
+     <input type="password" name="password2" id="password2" value="" placeholder="Match the password" minlength="8" onblur="matchPassword(this.id, this.value, 'reg')">
+     <span id="fbpassword2" ></span>
+    </fieldset><br><br> -->
+      <fieldset>
+      <legend>Agree to the Terms and Conditions</legend>
+      <input type="checkbox" name="agreement" id="agreement" value="I accept" onblur="myFunction(this.id, this.value, 'as')"> By ticking this box I confirm I read and accept the terms and conditions<span id="fbagreement">  </span><br><br>
+      </fieldset>
+      <input type="submit" value="Submit"/>
+    </form>
+    <p id="formready">Ready to Submit?</p><br><br>
+      </body>
+        </html>
