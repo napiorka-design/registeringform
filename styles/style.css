@@ -48,8 +48,10 @@ html {
 
   /* Add your flexbox CSS below here */
 
-  section {
+  .section1 {
     display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     
     
      /* To make sizing easier, include borders or padding in width 
@@ -58,12 +60,12 @@ html {
      min-width: 50px;
     
   }
-  .section1 article{
+  /*.section1 article{
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
 
-  }
+  }*/
 
   .navigation a {
     float: right;
@@ -97,7 +99,7 @@ html {
     font-size: 17px;
   }
  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
      .navigation a, .navigation input[type=text] {
       float: none;
       flex-flow: row wrap;
@@ -130,24 +132,3 @@ html {
   flex-direction: column;
 }
 }
-  /*width: auto;
-  /*height: auto;*/
-  /*text-align: left;
-  margin: 0;
-  width: 50%;
-  flex-wrap: wrap;
- 
-}
-.section {
-  /* display: flex;
-   /* To make sizing easier, include borders or padding in width */
-  
-   /* Set a limit on entry widths? */
-   /*min-width: 50px;  
-   display: block;*/
-  
-  
-
-
-
-  
